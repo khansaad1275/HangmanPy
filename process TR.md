@@ -1,4 +1,4 @@
-# HangmanPy Process TR
+# HangmanPy Programlama Süreci
 
 ## Fikir
 Python öğrenmeye karar verdikten sonra bir süre en iyi kaynaklar nelerdir diye internette araştırma yaptım ve Coursera'da tam istediğim gibi 5 kursluk bir seri buldum. Ancak programlamada ne kadar iyi bir eğitim ya da kurs söz konusu olursa olsun pratik yapmadan ilerlemenin mümkün olmadığını biliyordum bu yüzden de aklımın bir köşesinde hep kendimi geliştirme sürecinde yapabileceğim proje bulmak vardı. Fikir çoktu ama o kadar az bilgim vardı ki bu fikirleri hayata geçirmek için henüz hazır değildim. Ancak ilk kursu bitirirken yani yaklaşık iki hafta çalıştıktan sonra fark ettim ki hiçbir zaman hazır olmayacağım. Kendi projelerimi geliştirmeden de öğrendiklerimi pekiştirmem mümkün değildi. Bu yüzden Python çalışırken aklıma gelen adam asmaca oyununu projelendirmeye karar verdim. Bu bölümde de ilerlediğim aşamalar boyunca size projenin aşamalarından ve nasıl gerçekleştiğinden bahsedeceğim.
@@ -17,7 +17,7 @@ Bu kararımla birlikte hemen online sözlük apilerini araştırmaya başladım 
 
 <img src="http://i68.tinypic.com/34yvjbt.png" alt="Oxford Dictionary API info" width="400"/>
 
-Uygulamanın çok iyi bir dökümantasyonu olduğunu görünce çok mutlu oldum çünkü benim gibi bir çaylak için bu, bulunmaz bir nimetti. Python için aşağıda da görebileceğiniz API kodunu denedim hemen.
+Uygulamanın iyi bir dökümantasyonu olduğunu görünce çok mutlu oldum çünkü benim gibi bir çaylak için bu, bulunmaz bir nimetti. Python için aşağıda da görebileceğiniz API kodunu denedim hemen.
 
 ```Python
 # for more information on how to install requests
@@ -42,4 +42,8 @@ API id ve key bilgilerini girdikten sonra Terminal'de çalıştırınca önümde
 
 <img src="http://i68.tinypic.com/qzir9i.png" alt="Oxford Dictionary API json test" width="300"/>
 
-Bu noktada önümde çözmem gereken iki durum vardı. Birincisi bu json verileri arasından benim işime yarayacak bir sadeleştirme geliştirebilmek, diğeri de rastgele bir kelime atanmasını sağlamak. Çünkü uygulama temel olarak bir kelime girilmesi ve onunle ilgili verilerin çekilmesi üzerine çalışıyor ama benim ihtiyacım olan bu değildi. Ben API üzerinden kelime sorgulamayı değil, rastgele bir kelime seçilmesini istiyordum.
+Bu noktada önümde çözmem gereken iki durum vardı. Birincisi bu json verileri arasından benim işime yarayacak bir sadeleştirme geliştirebilmek, diğeri de rastgele bir kelime atanmasını sağlamak. Çünkü uygulama temel olarak bir kelime girilmesi ve onunle ilgili verilerin çekilmesi üzerine çalışıyor ama benim ihtiyacım olan bu değildi. Ben API üzerinden kelime sorgulamayı değil, rastgele bir kelime seçilmesini istiyordum. Dökümantasyonda araştırma yaparken şöyle bir ifadeye rastladım.
+
+> Although this isn't currently a feature of our API, there is a way to retrieve a random word. You could randomly select an offset value for the wordlist and limit the output to one result, which would effectively be the same as a random word selection. Please note that you would need to specify a filter before you do so, and that each call to the wordlist endpoint equates to 500 requests.
+
+Yani uygulamanın kendiliğinden bir kelime seçmesi mümkün değildi ancak her kelime bir sayısal değere denk geldiğinden Python'a önce rastgele bir numara seçtirip, bu numarayı API üzerinden aratarak kelime seçilmesini sağlamam gerekiyordu. Dolayısıyla benim ilk adım olarak gördüğüm API aşaması ikinci sıraya düştü ve rastgele bir numara seçilmesini öğrenmek ilk sıraya yükseldi. 
