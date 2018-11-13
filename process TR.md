@@ -40,6 +40,6 @@ print("json \n" + json.dumps(r.json()))
 
 API id ve key bilgilerini girdikten sonra Terminal'de çalıştırınca önümde yüzlerce satırlık json dosyası akmaya başladı. Üstelik bu sadece test kodu içerisinde verilmiş `word_id` olarak belirlenmiş olan **Ace** kelimesi içindi. Kodun son kısmındaki `print` komutlarını tek tek silerek neyin ne olduğunu anlamaya çalıştım. Bu yöntem çok işe yaramayınca json dosyasını online bir görüntüleyicide açarak verileri kontrol ettim. En kaba haliyle uygulamanın bana verdiği temel bilgiler aşağıdaki gibiydi ve detayları sanki sonsuza uzanıyordu.
 
-<img src="http://i68.tinypic.com/qzir9i.png" alt="Oxford Dictionary API json test" width="300"/>
+<img src="http://i68.tinypic.com/qzir9i.png" alt="Oxford Dictionary API json test" width="350"/>
 
 Bu noktada önümde çözmem gereken iki durum vardı. Birincisi bu json verileri arasından benim işime yarayacak bir sadeleştirme geliştirebilmek, diğeri de rastgele bir kelime atanmasını sağlamak. Çünkü uygulama temel olarak bir kelime girilmesi ve onunle ilgili verilerin çekilmesi üzerine çalışıyor ama benim ihtiyacım olan bu değildi. Ben API üzerinden kelime sorgulamayı değil, rastgele bir kelime seçilmesini istiyordum.
