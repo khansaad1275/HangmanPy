@@ -11,12 +11,11 @@ Normal koşullarda bir proje yaparken sonuca ulaşma sürecini olabildiğince k�
 ## Aşama 1 : Soru kelimesi belirleme
 Adam asmaca bir kelime oyunu olduğu için başlangıç noktamın bu kelimeyi belirleme olması gerekiyordu. Bunun için yapabileceğim bir iki seçenek vardı. Bir tanesi bir excel ya da text dosyası hazırlayıp kendi belirlediğim kelimelerden birini programın seçmesini sağlamak; diğeri ise işe biraz daha ciddi yaklaşıp online bir sözlükten veri çekmekti. Ben ikincisini tercih ettim çünkü kendi belirlediğim sınırlı sayıda kelimeyle oyunun tadı çıkmayacaktı. Üzerinde epey bir çalışacağım düşünülürse çalışırken öncelikle benim için de eğlenceli ve sürprizli olması; sonrasında ise kullanacak olanlar için tahmin edilemez olmasını istedim. Madem her şeyi sıfırdan yapıyorum neden biraz kendimi zorlamayayım değil mi?
 
-![Oxford Dictionary API for developers](http://i65.tinypic.com/205r410.png)
+<img src="http://i65.tinypic.com/205r410.png" alt="Oxford Dictionary API for developers" width="700"/>
 
 Bu kararımla birlikte hemen online sözlük apilerini araştırmaya başladım ve Oxford'un böyle bir imkanı olduğunu gördüm. [Oxford Developer Tool](https://developer.oxforddictionaries.com/) kısmından sınırlı kullanıma uygun bir ücretsiz hesap ve API oluşturdum ve Oxford bana aşağıdaki gibi API bilgilerimi verdi.
 
-![Oxford Dictionary API info](http://i68.tinypic.com/34yvjbt.png =500x)
-
+<img src="http://i68.tinypic.com/34yvjbt.png" alt="Oxford Dictionary API info" width="400"/>
 
 Uygulamanın çok iyi bir dökümantasyonu olduğunu görünce çok mutlu oldum çünkü benim gibi bir çaylak için bu, bulunmaz bir nimetti. Python için aşağıda da görebileceğiniz API kodunu denedim hemen.
 
@@ -41,6 +40,6 @@ print("json \n" + json.dumps(r.json()))
 
 API id ve key bilgilerini girdikten sonra Terminal'de çalıştırınca önümde yüzlerce satırlık json dosyası akmaya başladı. Üstelik bu sadece test kodu içerisinde verilmiş `word_id` olarak belirlenmiş olan **Ace** kelimesi içindi. Kodun son kısmındaki `print` komutlarını tek tek silerek neyin ne olduğunu anlamaya çalıştım. Bu yöntem çok işe yaramayınca json dosyasını online bir görüntüleyicide açarak verileri kontrol ettim. En kaba haliyle uygulamanın bana verdiği temel bilgiler aşağıdaki gibiydi ve detayları sanki sonsuza uzanıyordu.
 
-![Oxford Dictionary API json test](http://i68.tinypic.com/qzir9i.png =300x)
+<img src="http://i68.tinypic.com/qzir9i.png" alt="Oxford Dictionary API json test" width="300"/>
 
-Bu noktada önümde çözmem gereken iki durum vardı. Birincisi bu json verileri arasından benim işime yarayacak bir sadeleştirme geliştirebilmek, diğeri de rastgele bir kelime atanmasını sağlamak. Çünkü uygulama temel olarak bir kelime girilmesi ve onunle ilgili verilerin çekilmesi üzerine çalışıyor ama benim ihtiyacım olan bu değildi. Ben API üzerinden kelime sorgulamayı değil, rastgele bir kelime seçilmesini istiyordum. 
+Bu noktada önümde çözmem gereken iki durum vardı. Birincisi bu json verileri arasından benim işime yarayacak bir sadeleştirme geliştirebilmek, diğeri de rastgele bir kelime atanmasını sağlamak. Çünkü uygulama temel olarak bir kelime girilmesi ve onunle ilgili verilerin çekilmesi üzerine çalışıyor ama benim ihtiyacım olan bu değildi. Ben API üzerinden kelime sorgulamayı değil, rastgele bir kelime seçilmesini istiyordum.
