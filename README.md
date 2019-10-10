@@ -1,6 +1,7 @@
 # HangmanPy
-In this project I write a classic game called hangman in Python. As I am a rookie programmer, I am developing the project for learning. I'm also recording all of the project's improvements into "process" files on a regular basis. See the links below to see the process.
+In this little project I developed a classic game called hangman in Python. The words in the `words.txt` document were taken from a database of 5000 words, which are the most commonly used in English, and the words such as the adverbs, prepositions, and conjunctions were eliminated.  It's just for fun so have fun! :)
 
-* [process TR](https://github.com/hevalhazalkurt/HangmanPy/blob/master/process%20TR.md)
-* process EN (wip)
-* [My Medium blog posts](https://medium.com/@hevalhazalkurt)
+You can play the game online on [Repl.it](https://repl.it/@hevalhazalkurt/HangmanPy).
+
+
+![](screen.gif)
